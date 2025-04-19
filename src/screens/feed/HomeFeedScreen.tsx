@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { View, Text, FlatList, TouchableOpacity, Image, Alert, StyleSheet } from "react-native";
-import posts from "../data/mockPosts.json";
+import posts from "../data/mockPosts";
 import OpportunityBanner from "../components/OpportunityBanner";
 import { checkOpportunity } from "../utils/opportunityTrigger";
 
