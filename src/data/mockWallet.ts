@@ -1,5 +1,5 @@
 export const mockWallet = {
-  gold: 300,
-  silver: 800,
-  stones: 5,
+  gold: 500,
+  silver: 1000,
+  stones: 3,
 };

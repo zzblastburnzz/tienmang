@@ -1,3 +1,3 @@
-export function checkOpportunity() {
-  return Math.random() > 0.5;
+export function opportunityTrigger() {
+  return Math.random() > 0.7;
 }
