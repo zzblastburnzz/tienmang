@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import AsyncStorage from "@react-native-async-storage/async-storage";
-import { initNpcList } from "../data/npc/initNpcList";
+import { initNpcList } from "../../data/npc/initNpcList";
 import { repairNpcMissingAvatars } from "../ai/repairNpcMissingAvatars";
 
 export function useNpcInitializer() {
