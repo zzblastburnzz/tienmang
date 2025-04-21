@@ -16,7 +16,7 @@ import StoryFeedScreen from "../screens/feed/StoryFeedScreen";
 import ChatScreen from "../screens/chat/ChatScreen";
 import ChatRoomScreen from "../screens/chat/ChatRoomScreen";
 
-import OrganizationScreen from "../screens/org/OrganizationScreen";
+import OrganizationScreen from "../screens/org/MonPhaiScreen";
 import CreateSectScreen from "../screens/org/CreateSectScreen";
 import SectManagementScreen from "../screens/org/SectManagementScreen";
 import SectHistoryScreen from "../screens/org/SectHistoryScreen";
@@ -30,6 +30,9 @@ import CompanyMembersScreen from "../screens/org/CompanyMembersScreen";
 import InternalTaskScreen from "../screens/org/InternalTaskScreen";
 import ContributionHistoryScreen from "../screens/org/ContributionHistoryScreen";
 import AutoRewardSummaryScreen from "../screens/org/AutoRewardSummaryScreen";
+import FriendSuggestionScreen from "../screens/chat/FriendSuggestionScreen";
+import UnifiedProfileScreen from "../screens/profile/UnifiedProfileScreen";
+import PostDetailScreen from "../screens/PostDetailScreen";
 
 import ProfileScreen from "../screens/profile/ProfileScreen";
 import VIPStatusScreen from "../screens/profile/VIPStatusScreen";
@@ -42,7 +45,7 @@ function MainTabs() {
     <Tab.Navigator screenOptions={{ headerShown: false }}>
       <Tab.Screen name="Feed" component={FeedScreen} options={{ title: "Bảng tin" }} />
       <Tab.Screen name="Chat" component={ChatScreen} options={{ title: "Trò chuyện" }} />
-      <Tab.Screen name="Organization" component={OrganizationScreen} options={{ title: "Tổ chức" }} />
+      <Tab.Screen name="Organization" component={OrganizationScreen} options={{ title: "Môn phái" }} />
       <Tab.Screen name="Profile" component={ProfileScreen} options={{ title: "Cá nhân" }} />
     </Tab.Navigator>
   );
@@ -73,6 +76,10 @@ export default function AppNavigator() {
         <Stack.Screen name="ContributionHistory" component={ContributionHistoryScreen} />
         <Stack.Screen name="AutoRewardSummary" component={AutoRewardSummaryScreen} />
         <Stack.Screen name="VIPStatus" component={VIPStatusScreen} />
+	<Stack.Screen name="FriendSuggestion" component={FriendSuggestionScreen} />
+	<Stack.Screen name="ProfileView" component={UnifiedProfileScreen} />
+	<Stack.Screen name="CharacterProfile" component={UnifiedProfileScreen} />
+	<Stack.Screen name="PostDetail" component={PostDetailScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
