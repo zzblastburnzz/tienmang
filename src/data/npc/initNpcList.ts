@@ -6,15 +6,15 @@ export async function initNpcList() {
       personality: "hướng ngoại",
       worldOrigin: "Thiên Linh Giới",
       sect: "Vô Ưu Cốc",
-      avatar: "", // Avatar sẽ được sinh tự động
+      avatar: "",
       cultivationLevel: "Trúc Cơ sơ kỳ"
     },
     {
       id: "npc002",
       name: "Lục Nhi",
-      personality: "ngây thơ, tò mò",
+      personality: "ngây thơ",
       worldOrigin: "Địa Cầu",
-      sect: "Thường dân",
+      sect: "Tán tu",
       avatar: "",
       cultivationLevel: "Phàm nhân"
     }
