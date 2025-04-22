@@ -1,22 +1,41 @@
+
 import React, { useState } from "react";
-import { View, Text, TextInput, TouchableOpacity, StyleSheet, Alert } from "react-native";
-import { useNavigation } from "@react-navigation/native";
+import { View, TextInput, Button, StyleSheet } from "react-native";
 
 export default function CreatePostScreen() {
   const [content, setContent] = useState("");
-  const navigation = useNavigation();
 
   const handlePost = () => {
-    if (!content.trim()) return Alert.alert("Lỗi", "Bạn chưa nhập nội dung bài viết.");
-    // 🚧 Sau này sẽ lưu vào backend hoặc state toàn cục
-    Alert.alert("✅ Đăng bài thành công", "Bài viết của bạn đã xuất hiện trên bảng tin.");
-    setContent("");
-    navigation.goBack();
+    console.log("Posted:", content);
   };
 
   return (
     <View style={styles.container}>
-      <Text style={styles.header}>📝 Tạo bài viết mới</Text>
       <TextInput
         style={styles.textArea}
-        placeholder="Bạn đang nghĩ gì? (
+        placeholder="Bạn đang nghĩ gì? 😊"
+        multiline
+        numberOfLines={4}
+        value={content}
+        onChangeText={setContent}
+      />
+      <Button title="Đăng bài" onPress={handlePost} />
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    padding: 16,
+    backgroundColor: "#fff",
+  },
+  textArea: {
+    height: 120,
+    borderColor: "#ccc",
+    borderWidth: 1,
+    padding: 8,
+    marginBottom: 12,
+    textAlignVertical: "top",
+  },
+});
